@@ -77,29 +77,10 @@ const OrderForm = () => {
         );
     }
 
-    const checkTime = () => {
-        const now = new Date();
-        const currentHour = now.getHours();
-        const currentMinute = now.getMinutes();
-
-        // 4:30 PM is 16:30
-        if (currentHour < 16 || (currentHour === 16 && currentMinute < 30)) {
-            return false;
-        }
-        return true;
-    };
-
-    const isOpen = checkTime();
-
-    if (!isOpen) {
-        return (
-            <div className="neo-box" style={{ textAlign: 'center', padding: '60px', borderRadius: '0' }}>
-                <h2 style={{ color: 'var(--secondary-color)', fontSize: '3rem', marginBottom: '20px' }}>CLOSED</h2>
-                <p style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>We open from 4:30 PM till stock lasts.</p>
-                <p style={{ marginBottom: '30px' }}>Come back later for some sugary goodness.</p>
-            </div>
-        );
-    }
+    // Removed time restriction logic
+    // const checkTime = () => { ... }
+    // const isOpen = checkTime();
+    // if (!isOpen) { ... }
 
     return (
         <div className="neo-box" style={{
@@ -109,9 +90,12 @@ const OrderForm = () => {
             borderRadius: '0',
             transform: 'rotate(-1deg)'
         }}>
-            <h2 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '2.5rem', transform: 'skewX(-10deg)' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '10px', fontSize: '2.5rem', transform: 'skewX(-10deg)' }}>
                 GRAB IT
             </h2>
+            <p style={{ textAlign: 'center', marginBottom: '30px', fontStyle: 'italic', fontWeight: 'bold' }}>
+                (Store starts delivery at 4:30 PM till stock lasts)
+            </p>
 
             {error && <div style={{
                 backgroundColor: 'var(--accent-color)',
