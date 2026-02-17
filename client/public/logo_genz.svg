@@ -1,0 +1,15 @@
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .text { fill: #FF00FF; font-family: 'Arial Black', sans-serif; font-size: 60px; font-weight: bold; stroke: #00FF00; stroke-width: 2px; filter: url(#glow); }
+  </style>
+  <text x="50%" y="70%" text-anchor="middle" class="text" transform="rotate(-5, 150, 50)">CHASKA</text>
+</svg>

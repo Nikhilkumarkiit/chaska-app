@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@700;800&display=swap');
+
+:root {
+  --bg-color: #FDFCDC; /* Creamy White */
+  --text-color: #121212; /* Nearly Black */
+  --accent-color: #FF6B6B; /* Vibrant Red/Pink */
+  --secondary-color: #4ECDC4; /* Teal */
+  --border-color: #000000;
+  --shadow-color: #000000;
+  
+  --font-main: 'Space Grotesk', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  
+  --border-width: 3px;
+  --shadow-offset: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Neubrutalism Utilities */
+.neo-box {
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--shadow-color);
+  background-color: white;
+  transition: transform 0.1s;
+}
+
+.neo-box:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+.neo-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: var(--border-width) solid var(--border-color);
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--shadow-color);
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--shadow-color);
+  background-color: #FF5252;
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+.neo-input {
+  width: 100%;
+  padding: 12px;
+  border: var(--border-width) solid var(--border-color);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--shadow-color);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.neo-input:focus {
+  box-shadow: 6px 6px 0px var(--shadow-color);
+}
